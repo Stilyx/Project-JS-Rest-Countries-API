@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js"></script>
+    <script nomodule src="js/menu.js"></script>
+    <script nomodule src="js/flags.js"></script>
+    <title>Rest Countries</title>
+  </head>
+  <body class="light">
+    <!-- Header HTML -->
+
+    <header>
+      <nav class="nav-content">
+        <h1>Where in the world?</h1>
+        <div class="modify-theme">
+          <img src="images/moon-icon.svg" alt="Moon Icon" />
+          <p class="theme-paragraph">Dark Mode</p>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+
+    <main class="container">
+      <!-- Search Section, input and filter -->
+      <section class="searchContent">
+        <div class="input-form">
+          <div class="search-ico"></div>
+          <input
+            type="text"
+            name="searchItem"
+            id="searchItem"
+            placeholder="Search for a country…"
+            autocomplete="off"
+          />
+        </div>
+        <div class="select-style">
+          <p class="filter-content">Filter by Region</p>
+          <div class="filter-popup">
+            <p value="All" class="item-value">All</p>
+            <p value="Africa" class="item-value">Africa</p>
+            <p value="Asia" class="item-value">Asia</p>
+            <p value="Europe" class="item-value">Europe</p>
+            <p value="Oceania" class="item-value">Oceania</p>
+          </div>
+        </div>
+      </section>
+      <!-- Rest Countries Contents -->
+      <section class="flag-info"></section>
+      <!-- More info Specific Countrie -->
+      <section class="flag-more-info hidden">
+        <p class="return">Back</p>
+        <section class="flag-info-content">
+          <img src="" alt="State Flag" class="more-info-image" />
+          <div class="info">
+            <h1 class="region-name"></h1>
+            <div class="grid-infos">
+              <p class="native-name info-name">
+                Native Name:
+                <span class="nativeName"></span>
+              </p>
+              <p class="population info-name">
+                Population:
+                <span class="populationNumber"></span>
+              </p>
+              <p class="region info-name">
+                Region:
+                <span class="regionName"></span>
+              </p>
+              <p class="info-name">
+                Sub Region:
+                <span class="subRegion"></span>
+              </p>
+              <p class="capital info-name">
+                Capital:
+                <span class="capitalName"></span>
+              </p>
+              <p class="domain info-name">
+                Top Level Domain:
+                <span class="levelDomain"></span>
+              </p>
+              <p class="currencie info-name">
+                Currencies:
+                <span class="currencies"></span>
+              </p>
+              <p class="language info-name">
+                Languages:
+                <span class="languagues"></span>
+              </p>
+            </div>
+            <section class="border-countries">
+              <p class="countriesTitle">Border Countries:</p>
+              <ul class="countriesList"></ul>
+            </section>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
