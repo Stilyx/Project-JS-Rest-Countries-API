@@ -1,6 +1,8 @@
 const filterText = document.querySelector('.filter-content');
 const filterMenu = document.querySelector('.select-style');
 const flagsContent = document.querySelector('.flag-info');
+const searchContent = document.querySelector('.searchContent');
+const moreInfo = document.querySelector('.flag-more-info');
 
 // Exports
 
@@ -53,5 +55,7 @@ const filterRegion = e =>
 // Back To Inicial Page
 
 const returnToFlags = () => {
-  window.location.reload();
+  flagsContent.classList.remove('hidden');
+  searchContent.classList.remove('hidden');
+  moreInfo.classList.add('hidden');
 };

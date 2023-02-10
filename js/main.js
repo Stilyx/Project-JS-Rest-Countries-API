@@ -28,16 +28,18 @@ const sendMoreInfo = async state => {
 };
 
 const showMoreInfo = async e => {
-  if (e.target.parentElement !== 'container') {
+  const isFlagContent = e.target.parentElement.classList[0] !== 'container';
+  if (isFlagContent) {
     flagsContent.classList.add('hidden');
     searchContent.classList.add('hidden');
     moreInfo.classList.remove('hidden');
-    await sendMoreInfo(e.target.parentElement.childNodes[3].textContent.trim());
+    sendMoreInfo(e.target.parentElement.childNodes[3].textContent.trim());
   }
 };
 
 // Event Listeners
 
+document.body.addEventListener('load', sendFullCountries());
 backMenu.addEventListener('click', returnToFlags);
 theme.addEventListener('click', changeTheme);
 input.addEventListener('input', searchItemIntoFlags);
@@ -45,5 +47,3 @@ flagsContent.addEventListener('click', showMoreInfo);
 filterMenu.addEventListener('click', clickedFilter);
 
 // Functions
-
-sendFullCountries();
